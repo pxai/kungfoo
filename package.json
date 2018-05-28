@@ -4,8 +4,8 @@
   "description": "JavaScript Kung-foo",
   "main": "index.js",
   "scripts": {
-    "tdd": "nodemon --exec mocha **/*.test.js",
-    "test": "mocha **/*.test.js"
+    "tdd": "nodemon --exec mocha src/**/*.test.js",
+    "test": "mocha src/**/*.test.js"
   },
   "repository": {
     "type": "git",
