@@ -1,4 +1,4 @@
-
+// comment
 class BinarySearchTree {
 
 	constructor(value) {
@@ -30,4 +30,28 @@ class BinarySearchTree {
 	set left(left) {
 		this._left = left;
 	}
+
+	print() {
+		let result = this._value;
+		if (this._right == null) { 
+			result +=  "";
+		} else {
+			result += '\n\t' + this._right.print();
+		}
+
+		if (this._left== null) { 
+			result += "";
+		} else {
+			result += '\n\t' + this._left.print();
+		}
+		return result;
+	}
+
 }
+
+let tree = new BinarySearchTree(42);
+tree.right=new BinarySearchTree(666);
+tree.left=new BinarySearchTree(15);
+
+console.log(tree);
+console.log(tree.print());
